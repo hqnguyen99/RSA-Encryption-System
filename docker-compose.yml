@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    container_name: python-backend
+    restart: always
+    expose:
+      - "5000"
+    networks:
+      - myapp
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    container_name: reactjs-frontend
+    restart: always
+    environment:
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    networks:
+      - myapp
+    depends_on:
+      - backend
+networks:
+  myapp:
