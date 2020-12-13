@@ -12,7 +12,7 @@ Here I use Flask framework.
 
 
 ## Instruction 
-- From root directory, run docker-compose build && docker-compose up
+- From root directory, run docker-compose -up -d --build
 - In case Docker not wroking
     +Go to frontend folder, run npm install and run npm run start
     +In root folder run sudo apt install go. After finish run python3 app.py
