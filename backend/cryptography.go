@@ -20,7 +20,7 @@ type Cryptography struct {
 //export Start
 func Start(prime1 int, prime2 int) (int, int, int, int) {
 	c := new(Cryptography)
-	c.Init(61, 53)
+	c.Init(prime1, prime2)
 	return c.modulus, c.carmichael, c.e, c.d
 }
 
@@ -34,8 +34,6 @@ func isPrime(value int) bool {
 	return value > 1
 }
 func (c *Cryptography) Init(prime1 int, prime2 int) {
-	prime1 = 61
-	prime2 = 53
 	c.prime1 = prime1
 	c.prime2 = prime2
 	c.calculateModulus()

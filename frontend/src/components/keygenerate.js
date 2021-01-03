@@ -32,11 +32,9 @@ export default function Keygen() {
   const [second_prim, setSecondPrim] = useState("");
   
   const [pri_key1, setPriKey1] = useState("");
-  const [pri_key2, setPriKey2] = useState("");
 
   const [pub_key1, setPubKey1] = useState("");
   const [pub_key2, setPubKey2] = useState("");
-  const [nextbtn, setNextbtn] = useState(true);
   function routeChange(path){ 
       history.push(path);
   }
@@ -77,7 +75,6 @@ export default function Keygen() {
           setPriKey1(private_key);
           setPubKey1(public_key.split(' ')[0]);
           setPubKey2(public_key.split(' ')[1]);
-          setNextbtn(false);
         }
         else {
           alert(res.data.message);
@@ -140,7 +137,7 @@ export default function Keygen() {
             </Grid>
             <Grid item xs={12} sm={6} >
               <Grid container justify="center">
-                <Button disabled={nextbtn} style={{margin: 10,width:'38%',height:50,}} variant="outlined" color="primary" onClick={() => routeChange('send-msg')}>Go to Encryptor</Button>
+                <Button style={{margin: 10,width:'38%',height:50,}} variant="outlined" color="primary" onClick={() => routeChange('decryptor')}>Go to Decryptor'</Button>
               </Grid>
             </Grid>
         </Grid>

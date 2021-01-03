@@ -85,16 +85,6 @@ def check_prime_num(num):
     else:
         return False
 
-
-@app.route('/get_pubkey', methods=['POST'])
-def get_pubkey():
-    global public_key
-    res = {}
-    res['success'] = True
-    res['public_key'] = public_key
-    return res
-
-
 @app.route('/check_prime', methods=['POST'])
 def welcome():
     global private_key, public_key
@@ -167,4 +157,4 @@ def get_enmsg():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host="backend", port=5000)

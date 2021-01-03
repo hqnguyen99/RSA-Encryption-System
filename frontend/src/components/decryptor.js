@@ -49,7 +49,7 @@ export default function SendMsgcomponent() {
    }
   }
   const handlemessagechange = (event) =>{
-    const re = /^[0-9\b]+$/;
+    const re = /^[0-9 \b]+$/;
     if (event.target.value === '' || re.test(event.target.value)) {
         setEnMessage(event.target.value)
    }
@@ -61,9 +61,6 @@ export default function SendMsgcomponent() {
       .then(res => {
         if(res.data.success === true){
           setEnMessage(res.data.msg)
-        }
-        else {
-          alert(res.data.msg);
         }
       })
       .catch(error =>{
