@@ -1,7 +1,8 @@
 # RSA Encryption System
 
 ## General Goal
-- Provide a safe system that can encrypt your message. You don't have to worry about hackers or strangers  know about content of your chat. 
+- Provide a safe system that can encrypt your message. You don't have to worry about hackers or strangers know about your chats on Internet. 
+- Inspired by the idea of crossing-language implementations and communicating between languages.  
 
 ## Implementation
 
@@ -12,10 +13,7 @@ Here I use Flask framework.
 
 
 ## Instruction 
-- From root directory, run docker-compose -up -d --build
-- In case Docker not wroking
-    +Go to frontend folder, run npm install and run npm run start
-    +In root folder run sudo apt install go. After finish run python3 app.py
+- From root directory, run docker-compose -up -d --build. If you are in Windows, open Docker Desktop before executing command.
 - It will take a while to install npm and react-script.
 - Notice: Port 3000 and 5000 must be free on your machine 
 - Open web browser and go to localhost:3000/welcome
@@ -32,3 +30,5 @@ so they can send you the secret without being known. Remmember your private key.
 - Able to encrypt the message
 - Able to decrypt the message
 - In the future, I can save the chat log for each user so the message that they sent or receive will be save in the server. 
+
+
