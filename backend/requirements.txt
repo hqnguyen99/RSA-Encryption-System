@@ -9,4 +9,4 @@ pycodestyle==2.6.0
 pycryptodome==3.9.9
 six==1.15.0
 toml==0.10.2
-Werkzeug==1.0.1
+Werkzeug==2.2.3
